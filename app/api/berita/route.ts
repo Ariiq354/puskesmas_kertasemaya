@@ -1,0 +1,78 @@
+import prismadb from "@/lib/prismadb";
+import { NextRequest, NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
+import { authOptions } from "../auth/[...nextauth]/options";
+
+// export async function GET(request: Request) {
+//   const { searchParams } = new URL(request.url);
+//   const kategori = searchParams.get("kategori");
+//   const berita = await prismadb.tb_berita.findMany({
+//     where: { kategori: parseInt(kategori!) },
+//   });
+//   return NextResponse.json(berita);
+// }
+
+export async function POST(req: NextRequest) {
+  const session = getServerSession(authOptions);
+
+  if (!session) {
+    return new NextResponse("Unauthenticated", { status: 403 });
+  }
+  const body = await req.json();
+  const { nama, path_image, penulis, deskripsi, konten } = body;
+
+  const video = await prismadb.tb_berita.create({
+    data: {
+      nama: nama,
+      path_image: path_image,
+      penulis: penulis,
+      deskripsi: deskripsi,
+      konten: konten,
+    },
+  });
+
+  return NextResponse.json(video);
+}
+
+export async function DELETE(req: NextRequest) {
+  const session = getServerSession(authOptions);
+
+  if (!session) {
+    return new NextResponse("Unauthenticated", { status: 403 });
+  }
+  const body = await req.json();
+  const { id } = body;
+
+  const video = await prismadb.tb_berita.delete({
+    where: {
+      id_berita: id,
+    },
+  });
+
+  return NextResponse.json(video);
+}
+
+export async function PATCH(req: NextRequest) {
+  const session = getServerSession(authOptions);
+
+  if (!session) {
+    return new NextResponse("Unauthenticated", { status: 403 });
+  }
+  const body = await req.json();
+  const { id_berita, nama, path_image, penulis, deskripsi, konten } = body;
+
+  const video = await prismadb.tb_berita.update({
+    where: {
+      id_berita: id_berita,
+    },
+    data: {
+      nama: nama,
+      path_image: path_image,
+      penulis: penulis,
+      deskripsi: deskripsi,
+      konten: konten,
+    },
+  });
+
+  return NextResponse.json(video);
+}

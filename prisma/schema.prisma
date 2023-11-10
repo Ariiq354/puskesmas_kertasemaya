@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "cockroachdb"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model tb_user {
+  id_user    Int      @id @default(sequence())
+  username   String   @unique @db.String(255)
+  email      String
+  password   String
+  role       String   @default("0")
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+model tb_galeri {
+  id_galeri  Int      @id @default(sequence())
+  nama       String
+  jenis      String
+  path       String
+  konten     String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+model tb_berita {
+  id_berita  Int      @id @default(sequence())
+  nama       String
+  path_image String
+  penulis    String
+  deskripsi  String
+  konten     String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
