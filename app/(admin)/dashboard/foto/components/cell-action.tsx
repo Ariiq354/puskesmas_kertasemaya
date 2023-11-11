@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense, useState } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import {
@@ -35,7 +35,9 @@ export const CellAction: React.FC<FotoColumnProps> = ({ data }) => {
   const onConfirm = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/foto`, { data: { id: data.id_galeri } });
+      await axios.delete(`/api/galeri`, {
+        data: { id_galeri: data.id_galeri },
+      });
       toast.success("Foto deleted.");
       router.refresh();
     } catch (error) {

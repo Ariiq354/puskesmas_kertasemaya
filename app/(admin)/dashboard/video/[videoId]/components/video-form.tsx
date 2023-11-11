@@ -62,12 +62,12 @@ export const VideoForm: React.FC<VideoFormProps> = ({ initialData }) => {
     try {
       setLoading(true);
       if (initialData) {
-        await axios.patch(`/api/video`, {
+        await axios.patch(`/api/galeri`, {
           ...data,
-          id: initialData.id_galeri,
+          id_galeri: initialData.id_galeri,
         });
       } else {
-        await axios.post(`/api/video`, { ...data, jenis: "video" });
+        await axios.post(`/api/galeri`, { ...data, jenis: "video" });
       }
       router.refresh();
       router.push(`/dashboard/video`);
@@ -82,8 +82,8 @@ export const VideoForm: React.FC<VideoFormProps> = ({ initialData }) => {
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/video`, {
-        data: { id: initialData?.id_galeri },
+      await axios.delete(`/api/galeri`, {
+        data: { id_galeri: initialData?.id_galeri },
       });
       router.refresh();
       router.push(`/dashboard/video`);

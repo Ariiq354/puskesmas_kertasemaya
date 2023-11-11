@@ -72,7 +72,7 @@ export const BeritaForm: React.FC<BeritaFormProps> = ({ initialData }) => {
           id_berita: initialData.id_berita,
         });
       } else {
-        await axios.post(`/api/berita`, { ...data, kategori: 0 });
+        await axios.post(`/api/berita`, data);
       }
       router.refresh();
       router.push(`/dashboard/berita`);
@@ -88,7 +88,7 @@ export const BeritaForm: React.FC<BeritaFormProps> = ({ initialData }) => {
     try {
       setLoading(true);
       await axios.delete(`/api/berita`, {
-        data: { id: initialData?.id_berita },
+        data: { id_berita: initialData?.id_berita },
       });
       router.refresh();
       router.push(`/dashboard/berita`);

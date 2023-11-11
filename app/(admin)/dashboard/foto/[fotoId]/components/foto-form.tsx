@@ -62,12 +62,12 @@ export const FotoForm: React.FC<FotoFormProps> = ({ initialData }) => {
     try {
       setLoading(true);
       if (initialData) {
-        await axios.patch(`/api/foto`, {
+        await axios.patch(`/api/galeri`, {
           ...data,
-          id: initialData.id_galeri,
+          id_galeri: initialData.id_galeri,
         });
       } else {
-        await axios.post(`/api/foto`, { ...data, jenis: "foto" });
+        await axios.post(`/api/galeri`, { ...data, jenis: "foto" });
       }
       router.refresh();
       router.push(`/dashboard/foto`);
@@ -82,7 +82,9 @@ export const FotoForm: React.FC<FotoFormProps> = ({ initialData }) => {
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/foto`, { data: { id: initialData?.id_galeri } });
+      await axios.delete(`/api/galeri`, {
+        data: { id_galeri: initialData?.id_galeri },
+      });
       router.refresh();
       router.push(`/dashboard/foto`);
       toast.success("Photo deleted.");

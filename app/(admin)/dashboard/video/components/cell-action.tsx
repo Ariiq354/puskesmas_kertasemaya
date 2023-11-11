@@ -35,7 +35,9 @@ export const CellAction: React.FC<VideoColumnProps> = ({ data }) => {
   const onConfirm = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/video`, { data: { id: data.id_galeri } });
+      await axios.delete(`/api/galeri`, {
+        data: { id_galeri: data.id_galeri },
+      });
       toast.success("Video deleted.");
       router.refresh();
     } catch (error) {

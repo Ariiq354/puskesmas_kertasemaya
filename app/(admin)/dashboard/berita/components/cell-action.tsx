@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense, useState } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import {
@@ -12,7 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { Copy, Edit, MoreHorizontal, Trash, View } from "lucide-react";
+import { Copy, Edit, MoreHorizontal, Trash } from "lucide-react";
 import { AlertModal } from "@/components/modal/alert-modal";
 import { BeritaColumn } from "./column";
 import toast from "react-hot-toast";
@@ -31,7 +31,9 @@ export const CellAction: React.FC<BeritaColumnProps> = ({ data }) => {
   const onConfirm = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/berita`, { data: { id: data.id_berita } });
+      await axios.delete(`/api/berita`, {
+        data: { id_berita: data.id_berita },
+      });
       toast.success("News deleted.");
       router.refresh();
     } catch (error) {

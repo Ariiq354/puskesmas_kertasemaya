@@ -4,13 +4,7 @@ import { Client } from "./components/client";
 export const revalidate = 0;
 
 export default async function Dashboard() {
-  const data = await prismadb.tb_berita.findMany({
-    select: {
-      id_berita: true,
-      nama: true,
-      penulis: true,
-    },
-  });
+  const data = await prismadb.tb_berita.findMany();
 
   return (
     <div className="flex-col">
