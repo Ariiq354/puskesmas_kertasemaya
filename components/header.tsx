@@ -25,6 +25,7 @@ export default function Header() {
             href="https://www.facebook.com/puskesmas.kertasemaya.7"
             className="inline-flex items-center mr-6"
             target="_blank"
+            aria-label="facebook link"
           >
             <Image
               src="/facebook.jpg"
@@ -37,6 +38,7 @@ export default function Header() {
             href="https://www.instagram.com/puskesmas_kertasemaya/"
             className="inline-flex items-center mr-6"
             target="_blank"
+            aria-label="isntagram link"
           >
             <Image
               src="/instagram.png"
@@ -49,6 +51,7 @@ export default function Header() {
             href="https://www.youtube.com/@PuskesmasKertasemaya/"
             className="inline-flex items-center"
             target="_blank"
+            aria-label="youtube link"
           >
             <Image
               src="/youtube.png"

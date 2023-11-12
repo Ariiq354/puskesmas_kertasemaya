@@ -42,7 +42,7 @@ export default function TentangKami() {
                 </p>
 
                 <a href="/profil">
-                  <Button className="transition-all bg-red-500 hover:translate-y-[-0.5rem] hover:bg-red-600 font-bold">
+                  <Button className="transition-all bg-red-800 hover:translate-y-[-0.5rem] hover:bg-red-600 font-bold">
                     Informasi Lebih Lengkap
                   </Button>
                 </a>

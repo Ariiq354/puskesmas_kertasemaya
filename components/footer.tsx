@@ -10,9 +10,9 @@ export default function Footer() {
       <div className="bg-red-900 text-white pt-20 pb-10">
         <div className="container flex flex-wrap md:justify-center justify-start p-4 gap-4">
           <div className="w-[48rem] ">
-            <h3 className="text-white mb-4 font-bold text-3xl">
+            <p className="text-white mb-4 font-bold text-3xl">
               UPTD Puskesmas Kertasemaya
-            </h3>
+            </p>
             <div className="d-flex flex-column justify-content-start text-justify">
               <p>
                 Portal <b>UPTD Puskesmas Kertasemaya</b> adalah suatu laporan
@@ -45,18 +45,21 @@ export default function Footer() {
               <Link
                 href="https://www.facebook.com/puskesmas.kertasemaya.7"
                 target="_blank"
+                aria-label="facebook link"
               >
                 <Image src="/facebook.jpg" width={50} height={50} alt="" />
               </Link>
               <Link
                 href="https://www.instagram.com/puskesmas_kertasemaya/"
                 target="_blank"
+                aria-label="instagram link"
               >
                 <Image src="/instagram.png" width={50} height={50} alt="" />
               </Link>
               <Link
                 href="https://www.youtube.com/@PuskesmasKertasemaya"
                 target="_blank"
+                aria-label="youtube link"
               >
                 <Image
                   src="/youtube.png"

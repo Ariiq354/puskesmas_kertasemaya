@@ -53,8 +53,8 @@ export default function Register() {
         if (callback?.error) {
           toast.error(callback.error);
         } else {
-          toast.success("Logged in Succesfully");
           router.push("/dashboard");
+          toast.success("Logged in Succesfully");
         }
       })
       .finally(() => setIsLoading(false));

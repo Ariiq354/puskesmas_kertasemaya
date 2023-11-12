@@ -22,12 +22,15 @@ export default function Carousel() {
           </h1>
           <h1 className="flex gap-6 items-center md:flex-row flex-col justify-center">
             <Link href="https://webskrining.bpjs-kesehatan.go.id/skrining/index.html">
-              <Button className="bg-red-200 text-red-600 font-bold hover:bg-red-600 hover:text-white">
+              <Button className="bg-red-100 text-red-900 font-bold hover:bg-red-600 hover:text-white">
                 Skrining BPJS Kesehatan
               </Button>
             </Link>
             <Dialog>
-              <DialogTrigger className="bg-red-900 border-white border-2 rounded-full p-1 text-white md:ml-6">
+              <DialogTrigger
+                name="tonton"
+                className="bg-red-900 border-white border-2 rounded-full p-1 text-white md:ml-6"
+              >
                 <AiFillPlayCircle size={40} />
               </DialogTrigger>
               <DialogContent className="w-[64vw] md:h-[36vw]">
@@ -46,17 +49,21 @@ export default function Carousel() {
       </div>
       <div className="relative">
         <div className="flex flex-col gap-4 mt-4 lg:absolute p-4 lg:translate-y-[-200px] lg:translate-x-[80px]">
-          <div className="bg-red-200 text-red-600 p-4 flex flex-col gap-4">
+          <div className="bg-red-100 text-red-900 p-4 flex flex-col gap-4">
             <div className="font-bold text-xl flex justify-between">
               <div>Layanan Call Center 24 Jam</div>
               <div>
-                <Link href="https://wa.me/6282118894770" target="_blank">
+                <Link
+                  href="https://wa.me/6282118894770"
+                  target="_blank"
+                  aria-label="whatsapp link"
+                >
                   <Image src="/whatsapp.png" width={30} height={30} alt="" />
                 </Link>
               </div>
             </div>
           </div>
-          <div className="bg-red-200 text-red-600 flex-col flex p-12 font-bold">
+          <div className="bg-red-100 text-red-900 flex-col flex p-12 font-bold">
             <div className="font-bold mb-4 text-2xl">Jam Pelayanan</div>
             <div className="flex gap-1 justify-between border-red-600 border-b-2 text-lg">
               <div>Senin – Kamis</div>

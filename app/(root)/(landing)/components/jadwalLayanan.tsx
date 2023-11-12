@@ -58,7 +58,7 @@ export default function JadwalLayanan() {
               </div>
 
               <a href="/pelayanan24">
-                <Button className="transition-all bg-red-500 hover:translate-y-[-0.5rem] hover:bg-red-600 p-5 w-full md:w-[60%] font-bold mt-10 lg:mt-14 flex">
+                <Button className="transition-all bg-red-800 hover:translate-y-[-0.5rem] hover:bg-red-600 p-5 w-full md:w-[60%] font-bold mt-10 lg:mt-14 flex">
                   Jadwal Lengkap Pelayanan
                 </Button>
               </a>
