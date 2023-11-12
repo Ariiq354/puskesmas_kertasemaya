@@ -23,9 +23,9 @@ export default function Footer() {
             </div>
           </div>
           <div className="w-[18rem] ">
-            <h3 className="text-white mb-4 text-3xl font-bold">
+            <p className="text-white mb-4 text-3xl font-bold">
               Informasi Kontak
-            </h3>
+            </p>
             <p className="flex items-center gap-2">
               <FaLocationDot />
               Jl. By Pass Tulungagung
@@ -40,7 +40,7 @@ export default function Footer() {
             </p>
           </div>
           <div className="w-[10rem]">
-            <h3 className="text-white mb-4 text-3xl font-bold">Follow Us</h3>
+            <p className="text-white mb-4 text-3xl font-bold">Follow Us</p>
             <div className="flex gap-6 text-white items-center">
               <Link
                 href="https://www.facebook.com/puskesmas.kertasemaya.7"

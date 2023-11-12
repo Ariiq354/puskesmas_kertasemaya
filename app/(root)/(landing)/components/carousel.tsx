@@ -28,8 +28,8 @@ export default function Carousel() {
             </Link>
             <Dialog>
               <DialogTrigger
-                name="tonton"
                 className="bg-red-900 border-white border-2 rounded-full p-1 text-white md:ml-6"
+                title="tonton"
               >
                 <AiFillPlayCircle size={40} />
               </DialogTrigger>

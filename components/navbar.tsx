@@ -126,7 +126,7 @@ export default function Navbar() {
       </NavigationMenu>
       <Menubar className="md:hidden block border-0">
         <MenubarMenu>
-          <MenubarTrigger name="Menubar">
+          <MenubarTrigger title="Menubar">
             <AiOutlineMenu size={20} />
           </MenubarTrigger>
           <MenubarContent>
