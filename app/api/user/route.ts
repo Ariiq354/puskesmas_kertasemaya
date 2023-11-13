@@ -5,7 +5,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../auth/[...nextauth]/options";
 
 export async function POST(req: NextRequest) {
-  const session = getServerSession(authOptions);
+  const session = await getServerSession(authOptions);
 
   if (!session) {
     return new NextResponse("Unauthenticated", { status: 403 });
@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
 }
 
 export async function DELETE(req: NextRequest) {
-  const session = getServerSession(authOptions);
+  const session = await getServerSession(authOptions);
 
   if (!session) {
     return new NextResponse("Unauthenticated", { status: 403 });
@@ -56,7 +56,7 @@ export async function DELETE(req: NextRequest) {
 }
 
 export async function PATCH(req: NextRequest) {
-  const session = getServerSession(authOptions);
+  const session = await getServerSession(authOptions);
 
   if (!session) {
     return new NextResponse("Unauthenticated", { status: 403 });

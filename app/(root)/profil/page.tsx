@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import { FaCheckSquare, FaHome, FaListUl } from "react-icons/fa";
+import { FaHome, FaListUl } from "react-icons/fa";
 import Banner from "@/components/banner";
 
-export default function page() {
+export default async function page() {
   return (
     <>
       <Banner title="Profil Puskesmas" />

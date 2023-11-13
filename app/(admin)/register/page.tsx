@@ -51,7 +51,7 @@ export default function Register() {
     setIsLoading(true);
 
     axios
-      .post("/api/user", { ...data, role: "0" })
+      .post("/api/register", data)
       .then(() => {
         toast.success("User has been registered!");
         router.push("/login");
