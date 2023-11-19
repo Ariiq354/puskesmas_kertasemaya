@@ -70,7 +70,7 @@ export default function Navlink({ classname }: { classname?: string }) {
           href={"/login"}
           className={cn(
             buttonVariants(),
-            "bg-red-500 text-white hover:bg-red-700"
+            "bg-red-800 text-white hover:bg-red-900"
           )}
         >
           Log In
