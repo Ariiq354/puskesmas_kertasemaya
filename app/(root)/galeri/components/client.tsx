@@ -25,7 +25,7 @@ export default function Client({ data }: Props) {
       <div className="w-full flex items-center justify-center p-4 gap-4">
         <Button
           variant={"outline"}
-          className="border-red-500 border-2 text-red-500 hover:bg-red-500 text hover:text-white duration-300 font-bold w-20 rounded disabled:bg-red-500 disabled:text-white disabled:opacity-100"
+          className="border-red-800 border-2 text-red-800 hover:bg-red-800 text hover:text-white duration-300 font-bold w-20 rounded disabled:bg-red-800 disabled:text-white disabled:opacity-100"
           onClick={() => handleClick("foto")}
           disabled={disable}
         >
@@ -33,7 +33,7 @@ export default function Client({ data }: Props) {
         </Button>
         <Button
           variant={"outline"}
-          className="border-red-500 border-2 text-red-500 hover:bg-red-500 text hover:text-white duration-300 font-bold w-20 rounded disabled:bg-red-500 disabled:text-white disabled:opacity-100"
+          className="border-red-800 border-2 text-red-800 hover:bg-red-800 text hover:text-white duration-300 font-bold w-20 rounded disabled:bg-red-800 disabled:text-white disabled:opacity-100"
           onClick={() => handleClick("video")}
           disabled={!disable}
         >

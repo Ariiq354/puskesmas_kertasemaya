@@ -22,9 +22,9 @@ export default async function page() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="lg:flex lg:items-center ">
             <div className="lg:w-1/2 lg:pl-12 mt-6 lg:mt-0 ">
-              <h1 className="text-red-900 text-4xl font-semibold leading-tight">
+              <p className="text-red-900 text-4xl font-semibold leading-tight">
                 Visi
-              </h1>
+              </p>
               <p className="text-red-800 text-base md:text-md lg:text-xl mt-4">
                 &quot;Terwujudnya Indramayu BERMARTABAT (Bersih, Religius, Maju,
                 Adil, Makmur dan Hebat)&quot;
@@ -34,52 +34,39 @@ export default async function page() {
               <h1 className="text-red-900 text-4xl font-semibold leading-tight">
                 Misi
               </h1>
-              <table className="text-red-800 text-base md:text-md lg:text-md mt-4 list-decimal list-inside">
-                <tbody>
-                  <tr>
-                    <th colSpan={3} className="font-bold text-left">
-                      Sapta Nata Mulia Jaya:
-                    </th>
-                  </tr>
-                  <tr className="mb-4">
-                    <td className="w-[30%]">1. MISI PERTAMA</td>
-                    <td>:</td>
-                    <td>&nbsp;Perwujudan Reformasi Birokrasi</td>
-                  </tr>
-                  <tr className="mb-4">
-                    <td className="">2. MISI KEDUA</td>
-                    <td>:</td>
-                    <td>
-                      &nbsp;Fasilitasi Kehidupan Beragama dan Bermasyarakat
-                    </td>
-                  </tr>
-                  <tr className="mb-4">
-                    <td className="">3. MISI KETIGA</td>
-                    <td>:</td>
-                    <td>&nbsp;Peningkatan Kesejahtraan</td>
-                  </tr>
-                  <tr className="mb-4">
-                    <td>4. MISI KEEMPAT</td>
-                    <td>:</td>
-                    <td>&nbsp;Penanggulangan Kemiskinan</td>
-                  </tr>
-                  <tr className="mb-4">
-                    <td>5. MISI KELIMA</td>
-                    <td>:</td>
-                    <td>&nbsp;Peningkatan Daya Saing SDM</td>
-                  </tr>
-                  <tr className="mb-4">
-                    <td>6. MISI KEENAM</td>
-                    <td>:</td>
-                    <td>&nbsp;Peningkatan Infrastruktur</td>
-                  </tr>
-                  <tr className="mb-4">
-                    <td>7. MISI KETUJUH</td>
-                    <td>:</td>
-                    <td>&nbsp;Peningkatan Ekonomi dan Daya Saing Daerah</td>
-                  </tr>
-                </tbody>
-              </table>
+              <p className="font-bold text-left text-red-900 mt-4">
+                Sapta Nata Mulia Jaya:
+              </p>
+              <ul className="text-red-800 text-base md:text-md lg:text-md list-inside table list-decimal">
+                <li className="table-row w-fit">
+                  <p className="table-cell pr-4">MISI PERTAMA</p>: Perwujudan
+                  Reformasi Birokrasi
+                </li>
+                <li className="table-row">
+                  <p className="table-cell pr-4">MISI KEDUA</p>: Fasilitasi
+                  Kehidupan Beragama dan Bermasyarakat
+                </li>
+                <li className="table-row">
+                  <p className="table-cell pr-4">MISI KETIGA</p>: Peningkatan
+                  Kesejahtraan
+                </li>
+                <li className="table-row">
+                  <p className="table-cell pr-4">MISI KEEMPAT</p>:
+                  Penanggulangan Kemiskinan
+                </li>
+                <li className="table-row">
+                  <p className="table-cell pr-4">MISI KELIMA</p>: Peningkatan
+                  Daya Saing SDM
+                </li>
+                <li className="table-row">
+                  <p className="table-cell pr-4">MISI KEENAM</p>: Peningkatan
+                  Infrastruktur
+                </li>
+                <li className="table-row">
+                  <p className="table-cell pr-4">MISI KETUJUH</p>: Peningkatan
+                  Ekonomi dan Daya Saing Daerah
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -115,10 +102,10 @@ export default async function page() {
 
         <div className=" mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="flex justify-center items-start p-4 bg-red-800 rounded-t-lg">
-            <h5 className="card-title text-xl font-semibold text-white mb-2">
+            <p className="card-title text-xl font-semibold text-white mb-2">
               <FaListUl className="inline-block mr-2 text-xl" />
               TUJUAN
-            </h5>
+            </p>
           </div>
           <div className="card-body p-4">
             <ol className="list-decimal pl-6 mt-2">
@@ -152,7 +139,7 @@ export default async function page() {
 
       <div className="text-center p-8 py-12 pb-16 text-red-900">
         <div>
-          <h2 className="text-5xl font-semibold mb-8">STRUKTUR ORGANISASI</h2>
+          <p className="text-5xl font-semibold mb-8">STRUKTUR ORGANISASI</p>
         </div>
 
         <div className="flex justify-center">
