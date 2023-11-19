@@ -123,7 +123,7 @@ export default function Navbar() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/login" legacyBehavior passHref>
+            <Link href="/login" legacyBehavior passHref target="_blank">
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Log In
               </NavigationMenuLink>
