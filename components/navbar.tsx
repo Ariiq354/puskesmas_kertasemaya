@@ -122,6 +122,13 @@ export default function Navbar() {
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/login In" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Log In
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
       <Menubar className="md:hidden block border-0">
@@ -160,6 +167,9 @@ export default function Navbar() {
             </Link>
             <Link href="/hubungikami" passHref>
               <MenubarItem>Hubungi Kami</MenubarItem>
+            </Link>
+            <Link href="/login" passHref>
+              <MenubarItem>Log In</MenubarItem>
             </Link>
           </MenubarContent>
         </MenubarMenu>
