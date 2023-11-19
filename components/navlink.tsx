@@ -57,7 +57,7 @@ export default function Navlink({ classname }: { classname?: string }) {
               >
                 {item.submenu!.map((subMenu) => (
                   <Link key={subMenu.title} href={subMenu.href}>
-                    <div className="p-3 hover:bg-red-500 hover:text-white transition-colors duration-200">
+                    <div className="p-3 hover:bg-red-900 hover:text-white transition-colors duration-200">
                       {subMenu.title}
                     </div>
                   </Link>
@@ -70,7 +70,7 @@ export default function Navlink({ classname }: { classname?: string }) {
           href={"/login"}
           className={cn(
             buttonVariants(),
-            "bg-red-800 text-white hover:bg-red-900"
+            "bg-red-900 text-white hover:bg-red-900"
           )}
         >
           Log In

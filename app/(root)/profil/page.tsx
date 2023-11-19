@@ -18,28 +18,28 @@ export default async function page() {
         ></Image>
       </div>
 
-      <div className="bg-info py-8 lg:py-10 mb-8 my-16 bg-red-100 rounded">
+      <div className="bg-info py-8 lg:py-10 mb-8 my-16 bg-red-50 rounded">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="lg:flex lg:items-center ">
             <div className="lg:w-1/2 lg:pl-12 mt-6 lg:mt-0 ">
-              <h1 className="text-red-600 text-4xl font-semibold leading-tight">
+              <h1 className="text-red-900 text-4xl font-semibold leading-tight">
                 Visi
               </h1>
-              <p className="text-red-500 text-base md:text-md lg:text-xl mt-4">
+              <p className="text-red-800 text-base md:text-md lg:text-xl mt-4">
                 &quot;Terwujudnya Indramayu BERMARTABAT (Bersih, Religius, Maju,
                 Adil, Makmur dan Hebat)&quot;
               </p>
             </div>
             <div className="lg:w-1/2 lg:pl-12 mt-12 lg:mt-0">
-              <h1 className="text-red-600 text-4xl font-semibold leading-tight">
+              <h1 className="text-red-900 text-4xl font-semibold leading-tight">
                 Misi
               </h1>
-              <table className="text-red-500 text-base md:text-md lg:text-md mt-4 list-decimal list-inside">
+              <table className="text-red-800 text-base md:text-md lg:text-md mt-4 list-decimal list-inside">
                 <tbody>
                   <tr>
-                    <td colSpan={3} className="font-bold">
+                    <th colSpan={3} className="font-bold text-left">
                       Sapta Nata Mulia Jaya:
-                    </td>
+                    </th>
                   </tr>
                   <tr className="mb-4">
                     <td className="w-[30%]">1. MISI PERTAMA</td>
@@ -86,11 +86,11 @@ export default async function page() {
       </div>
       <div className="grid grid-cols-1 py-8  md:grid-cols-2 lg:grid-cols-2 gap-4 px-5 md:px-10 lg:px-20 justify-center">
         <div className=" mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="flex justify-center items-start p-4 bg-red-400 rounded-t-lg">
-            <h5 className="card-title text-xl font-semibold text-white mb-2">
+          <div className="flex justify-center items-start p-4 bg-red-800 rounded-t-lg">
+            <p className="card-title text-xl font-semibold text-white mb-2">
               <FaHome className="inline-block mr-2 text-xl" />
               MOTTO & TATA NILAI
-            </h5>
+            </p>
           </div>
           <div className="card-body p-4">
             <p className="card-text text-gray-800">
@@ -114,7 +114,7 @@ export default async function page() {
         </div>
 
         <div className=" mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="flex justify-center items-start p-4 bg-red-400 rounded-t-lg">
+          <div className="flex justify-center items-start p-4 bg-red-800 rounded-t-lg">
             <h5 className="card-title text-xl font-semibold text-white mb-2">
               <FaListUl className="inline-block mr-2 text-xl" />
               TUJUAN

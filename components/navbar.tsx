@@ -28,7 +28,7 @@ export default function Navbar() {
       <Navlink
         classname={cn(
           buttonVariants({ variant: "ghost" }),
-          "hover:bg-red-500 hover:text-white"
+          "hover:bg-red-900 hover:text-white"
         )}
       />
     </div>
