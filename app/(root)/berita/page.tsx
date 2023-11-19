@@ -1,4 +1,3 @@
-import Banner from "@/components/banner";
 import prismadb from "@/lib/prismadb";
 import Client from "./components/client";
 
@@ -9,7 +8,6 @@ export default async function Berita() {
 
   return (
     <>
-      <Banner title="Berita Puskesmas" />
       <Client data={data} />
     </>
   );

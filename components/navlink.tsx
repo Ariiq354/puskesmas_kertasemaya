@@ -80,7 +80,7 @@ export default function Navlink({ classname }: { classname?: string }) {
       {/* Mobile Navlink */}
       <div className="block md:hidden">
         <Sheet>
-          <SheetTrigger>
+          <SheetTrigger title="Menu">
             <AiOutlineMenu size={25} />
           </SheetTrigger>
           <SheetContent>

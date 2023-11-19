@@ -1,6 +1,5 @@
 import prismadb from "@/lib/prismadb";
 import Client from "./components/client";
-import Banner from "@/components/banner";
 
 export const revalidate = 0;
 
@@ -9,7 +8,6 @@ export default async function Galeri() {
 
   return (
     <>
-      <Banner title="Galeri" />
       <Client data={data} />
     </>
   );
