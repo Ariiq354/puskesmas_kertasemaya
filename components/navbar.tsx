@@ -49,20 +49,27 @@ export default function Navbar() {
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href="/profil" passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  "hover:bg-red-500 hover:text-white"
+                )}
+              >
                 Profil
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Informasi</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="data-[active]:bg-white data-[state=open]:bg-white hover:bg-white">
+              Informasi
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="p-2 w-[250px] grid">
                 <Link href="/pelayanan24" className="rounded w-full">
                   <NavigationMenuLink
                     className={cn(
                       navigationMenuTriggerStyle(),
-                      "w-full justify-start"
+                      "w-full justify-start hover:bg-red-500 hover:text-white"
                     )}
                   >
                     Pelayanan UKPP
@@ -72,7 +79,7 @@ export default function Navbar() {
                   <NavigationMenuLink
                     className={cn(
                       navigationMenuTriggerStyle(),
-                      "w-full justify-start"
+                      "w-full justify-start hover:bg-red-500 hover:text-white"
                     )}
                   >
                     Pelayanan UKM Pengembangan
@@ -82,7 +89,7 @@ export default function Navbar() {
                   <NavigationMenuLink
                     className={cn(
                       navigationMenuTriggerStyle(),
-                      "w-full justify-start"
+                      "w-full justify-start hover:bg-red-500 hover:text-white"
                     )}
                   >
                     Pelayanan UKM Essensial
@@ -92,7 +99,7 @@ export default function Navbar() {
                   <NavigationMenuLink
                     className={cn(
                       navigationMenuTriggerStyle(),
-                      "w-full justify-start"
+                      "w-full justify-start hover:bg-red-500 hover:text-white"
                     )}
                   >
                     Inovasi Puskesmas
@@ -103,28 +110,48 @@ export default function Navbar() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/berita" passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  "hover:bg-red-500 hover:text-white"
+                )}
+              >
                 Berita
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/galeri" passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  "hover:bg-red-500 hover:text-white"
+                )}
+              >
                 Galeri
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/hubungikami" passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  "hover:bg-red-500 hover:text-white"
+                )}
+              >
                 Hubungi Kami
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/login" passHref target="_blank">
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  "hover:bg-red-500 hover:text-white"
+                )}
+              >
                 Log In
               </NavigationMenuLink>
             </Link>
