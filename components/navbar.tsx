@@ -48,7 +48,7 @@ export default function Navbar() {
       <NavigationMenu className="hidden md:block">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href="/profil" legacyBehavior passHref>
+            <Link href="/profil" passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Profil
               </NavigationMenuLink>
@@ -102,28 +102,28 @@ export default function Navbar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/berita" legacyBehavior passHref>
+            <Link href="/berita" passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Berita
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/galeri" legacyBehavior passHref>
+            <Link href="/galeri" passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Galeri
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/hubungikami" legacyBehavior passHref>
+            <Link href="/hubungikami" passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Hubungi Kami
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/login" legacyBehavior passHref target="_blank">
+            <Link href="/login" passHref target="_blank">
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Log In
               </NavigationMenuLink>
