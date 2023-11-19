@@ -1,20 +1,3 @@
-import { BiClinic, BiSolidReport } from "react-icons/bi";
-import { BsSoundwave, BsVirus } from "react-icons/bs";
-import { MdElderly, MdFamilyRestroom, MdReport } from "react-icons/md";
-import {
-  FaTooth,
-  FaPeopleCarry,
-  FaBaby,
-  FaLungsVirus,
-  FaAmbulance,
-  FaBed,
-  FaUserMd,
-  FaHome,
-  FaShieldVirus,
-} from "react-icons/fa";
-import { TbBabyCarriage } from "react-icons/tb";
-
-import { ScrollText } from "lucide-react";
 import { BiHome, BiImageAdd, BiVideoPlus } from "react-icons/bi";
 import { HiOutlineNewspaper } from "react-icons/hi";
 
@@ -35,5 +18,46 @@ export const Menus = [
     title: "News ",
     src: <HiOutlineNewspaper size={25} />,
     href: "/dashboard/berita",
+  },
+];
+
+export const NavMenu = [
+  {
+    title: "Profil",
+    href: "/profil",
+  },
+  {
+    title: "Informasi",
+    href: null,
+    submenu: [
+      {
+        title: "Pelayanan UKPP",
+        href: "/pelayanan24",
+      },
+      {
+        title: "Pelayanan UKM Pengembangan",
+        href: "/pengembangan",
+      },
+      {
+        title: "Pelayanan UKM Esensial",
+        href: "/esensial",
+      },
+      {
+        title: "Inovasi Puskesmas",
+        href: "/inovasi",
+      },
+    ],
+  },
+  {
+    title: "Berita",
+    href: "/berita",
+  },
+  {
+    title: "Galeri",
+    href: "/galeri",
+  },
+  {
+    title: "Hubungi Kami",
+    href: "/hubungikami",
   },
 ];
