@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-import { useDebouncedCallback } from "use-debounce";
 import { tb_berita } from "@prisma/client";
+import { useDebouncedCallback } from "use-debounce";
 
 import { Input } from "@/components/ui/input";
+import { usePagination } from "@/hooks/use-pagination";
 import { useState } from "react";
+import Pagination from "@/components/ui/pagination";
 
 interface Props {
   data: tb_berita[];
@@ -28,6 +29,7 @@ export default function Client({ data }: Props) {
 
   const handleChange = useDebouncedCallback((data: string) => {
     setQuerySearch(data);
+    setCurrentPage(1);
   }, 300);
 
   const filteredData = data.filter((item) =>
@@ -35,6 +37,15 @@ export default function Client({ data }: Props) {
       item[key as keyof SearchProps].toLowerCase().includes(querySeach)
     )
   );
+
+  const {
+    currentData,
+    currentPage,
+    handleNextPage,
+    handlePreviousPage,
+    paginationRange,
+    setCurrentPage,
+  } = usePagination<tb_berita>(filteredData, 4, 1);
 
   return (
     <>
@@ -46,7 +57,7 @@ export default function Client({ data }: Props) {
         />
       </div>
       <div className="container md:grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 my-10">
-        {filteredData.map((item) => (
+        {currentData.map((item) => (
           <div
             key={item.id_berita}
             className="bg-white shadow-md rounded overflow-hidden max-w-sm mx-auto border-t-4 border-t-red-500 my-5 sm:my-0 flex flex-col justify-between"
@@ -76,6 +87,16 @@ export default function Client({ data }: Props) {
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-center w-full mb-4">
+        <Pagination
+          className=""
+          currentPage={currentPage}
+          handleCurrentPage={setCurrentPage}
+          handleNextPage={handleNextPage}
+          handlePreviousPage={handlePreviousPage}
+          pageRange={paginationRange!}
+        />
       </div>
     </>
   );
