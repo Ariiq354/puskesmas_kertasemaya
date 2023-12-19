@@ -19,12 +19,6 @@ export async function POST(req: NextRequest) {
   return NextResponse.json(video);
 }
 
-export async function GET(req: NextRequest) {
-  const data = await prismadb.tb_user.findMany();
-
-  return data;
-}
-
 export async function DELETE(req: NextRequest) {
   const session = await getServerSession(authOptions);
 
