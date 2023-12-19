@@ -1,5 +1,7 @@
 import prismadb from "@/lib/prismadb";
 import { Client } from "./components/client";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/options";
 
 export const revalidate = 0;
 
@@ -12,6 +14,8 @@ export default async function Dashboard() {
       email: true,
     },
   });
+  const session = await getServerSession(authOptions);
+  console.log(session);
 
   return (
     <div className="flex-col">

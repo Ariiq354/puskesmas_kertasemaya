@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { usePagination } from "@/hooks/use-pagination";
 import Pagination from "@/components/ui/pagination";
 import page from "../../profil/page";
+import { ViewModal } from "@/components/modal/view-modal";
 
 interface Props {
   data: tb_galeri[];
@@ -20,6 +21,11 @@ export default function Client({ data }: Props) {
   const [filtered, setFiltered] = useState(
     data.filter((item) => item.jenis == "foto")
   );
+
+  const [viewOpenImage, setViewOpenImage] = useState(false);
+  const [foto, setFoto] = useState("");
+  const [deskripsi, setDeskripsi] = useState("");
+  const [title, setTitle] = useState("");
 
   const handleClick = (jenis: string) => {
     setFiltered(data.filter((item) => item.jenis == jenis));
@@ -36,8 +42,23 @@ export default function Client({ data }: Props) {
     setCurrentPage,
   } = usePagination<tb_galeri>(filtered, 6, 1);
 
+  const onViewImage = (data: string, title: string, description: string) => {
+    setViewOpenImage(true);
+    setFoto(data);
+    setTitle(title);
+    setDeskripsi(description);
+  };
+
   return (
     <>
+      <ViewModal
+        title={title}
+        description={deskripsi}
+        isOpen={viewOpenImage}
+        onClose={() => setViewOpenImage(false)}
+      >
+        <Image src={foto} alt="foto" width={500} height={500} />
+      </ViewModal>
       <div className="w-full flex items-center justify-center p-4 gap-4">
         <Button
           variant={"outline"}
@@ -65,9 +86,14 @@ export default function Client({ data }: Props) {
               alt={item.nama}
               width={300}
               height={300}
+              onClick={() => onViewImage(item.path, item.nama, item.konten)}
             />
           ) : (
-            <iframe key={item.id_galeri} src={item.path}></iframe>
+            <iframe
+              key={item.id_galeri}
+              src={item.path}
+              allowFullScreen={true}
+            ></iframe>
           )
         )}
       </div>

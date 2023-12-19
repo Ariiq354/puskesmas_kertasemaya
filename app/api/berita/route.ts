@@ -11,19 +11,18 @@ export async function POST(req: NextRequest) {
     return new NextResponse("Unauthenticated", { status: 403 });
   }
   const body: tb_berita = await req.json();
-  const { nama, path_image, penulis, deskripsi, konten } = body;
 
   const video = await prismadb.tb_berita.create({
-    data: {
-      nama,
-      path_image,
-      penulis,
-      deskripsi,
-      konten,
-    },
+    data: body,
   });
 
   return NextResponse.json(video);
+}
+
+export async function GET(req: NextRequest) {
+  const data = await prismadb.tb_user.findMany();
+
+  return data;
 }
 
 export async function DELETE(req: NextRequest) {
