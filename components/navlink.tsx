@@ -72,6 +72,7 @@ export default function Navlink({ classname }: { classname?: string }) {
             buttonVariants(),
             "bg-red-900 text-white hover:bg-red-900"
           )}
+          target="_blank"
         >
           Log In
         </Link>

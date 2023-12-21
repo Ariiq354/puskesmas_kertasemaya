@@ -1,18 +1,28 @@
+"use client";
+
 import Banner from "@/components/banner";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { ViewModal } from "@/components/modal/view-modal";
 import CustomCard from "@/components/ui/customCard";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Pengembangan() {
+  const [viewOpen, setViewOpen] = useState(false);
+  const [foto, setFoto] = useState("");
+
+  function onTap(data: string) {
+    setViewOpen(true);
+    setFoto(data);
+  }
   return (
     <>
+      <ViewModal
+        title="Photo Viewer"
+        isOpen={viewOpen}
+        onClose={() => setViewOpen(false)}
+      >
+        <Image src={foto} alt="foto" width={500} height={500} />
+      </ViewModal>
       <div className="bg-red-100 bg-opacity-60">
         <Banner title="Pelayanan Usaha Kesehatan Masyarakat (UKM) Pengembangan" />
 
@@ -23,30 +33,35 @@ export default function Pengembangan() {
               title="Kesehatan Lansia"
               description="Layanan UKM Pengembangan"
               content=""
+              onTap={onTap}
             />
             <CustomCard
               src="/perkesmas.jpg"
               title="Perkesmas"
               description="Layanan UKM Pengembangan"
               content=""
+              onTap={onTap}
             />
             <CustomCard
               src="/sekolah_thumb2.jpg"
               title="Kesehatan Sekolah"
               description="Layanan UKM Pengembangan"
               content=""
+              onTap={onTap}
             />
             <CustomCard
               src="/gigi.jpg"
               title="Kesehatan Gigi Sekolah"
               description="Layanan UKM Pengembangan"
               content=""
+              onTap={onTap}
             />
             <CustomCard
               src="/indera.jpeg"
               title="Kesehatan Indera"
               description="Layanan UKM Pengembangan"
               content=""
+              onTap={onTap}
             />
           </div>
         </div>

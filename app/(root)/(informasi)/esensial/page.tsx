@@ -1,18 +1,29 @@
+"use client";
+
 import Banner from "@/components/banner";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { ViewModal } from "@/components/modal/view-modal";
 import CustomCard from "@/components/ui/customCard";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Esensial() {
+  const [viewOpen, setViewOpen] = useState(false);
+  const [foto, setFoto] = useState("");
+
+  function onTap(data: string) {
+    setViewOpen(true);
+    setFoto(data);
+  }
+
   return (
     <>
+      <ViewModal
+        title="Photo Viewer"
+        isOpen={viewOpen}
+        onClose={() => setViewOpen(false)}
+      >
+        <Image src={foto} alt="foto" width={500} height={500} />
+      </ViewModal>
       <div className="bg-red-100 bg-opacity-60">
         <Banner title="Pelayanan UKM Esensial" />
 
@@ -23,6 +34,7 @@ export default function Esensial() {
               title="Promosi Kesehatan"
               description="UKM Essensial"
               content=""
+              onTap={onTap}
             />
 
             <CustomCard
@@ -30,6 +42,7 @@ export default function Esensial() {
               title="Kesehatan Lingkungan"
               description="UKM Essensial"
               content=""
+              onTap={onTap}
             />
 
             <CustomCard
@@ -37,6 +50,7 @@ export default function Esensial() {
               title="Kesehatan KIA"
               description="UKM Essensial"
               content=""
+              onTap={onTap}
             />
 
             <CustomCard
@@ -44,6 +58,7 @@ export default function Esensial() {
               title="Gizi"
               description="UKM Essensial"
               content=""
+              onTap={onTap}
             />
 
             <CustomCard
@@ -52,6 +67,7 @@ export default function Esensial() {
               description="UKM Essensial"
               content="TB, HIV, Surveilans dan Imunisasi, Ispa, Diare, DBD,
               Hepatitis, Kusta"
+              onTap={onTap}
             />
 
             <CustomCard
@@ -59,6 +75,7 @@ export default function Esensial() {
               title="Pengendalian dan Pencegahan Penyakit Tidak Menular (P2PTM)"
               description="UKM Essensial"
               content="PTM (Penyakit Tidak Menular), Jiwa, Indera"
+              onTap={onTap}
             />
           </div>
         </div>

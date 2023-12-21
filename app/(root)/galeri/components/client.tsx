@@ -89,11 +89,10 @@ export default function Client({ data }: Props) {
               onClick={() => onViewImage(item.path, item.nama, item.konten)}
             />
           ) : (
-            <iframe
-              key={item.id_galeri}
-              src={item.path}
-              allowFullScreen={true}
-            ></iframe>
+            <div key={item.id_galeri} className="flex flex-col gap-2 w-80">
+              <iframe src={item.path} allowFullScreen={true}></iframe>
+              <div className="cutoffNama">{item.nama}</div>
+            </div>
           )
         )}
       </div>

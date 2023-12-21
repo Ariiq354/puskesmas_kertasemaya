@@ -14,6 +14,7 @@ interface Props {
   title: string;
   description: string;
   content: string;
+  onTap: (data: string) => void;
 }
 
 export default function CustomCard({
@@ -21,6 +22,7 @@ export default function CustomCard({
   description,
   src,
   title,
+  onTap,
 }: Props) {
   return (
     <Card className="w-80">
@@ -31,6 +33,7 @@ export default function CustomCard({
           width={300}
           height={300}
           className="w-full rounded-md"
+          onClick={() => onTap(src)}
         ></Image>
         <div className="flex flex-col gap-2">
           <CardTitle className="text-red-600 text-center">{title}</CardTitle>
