@@ -95,6 +95,7 @@ export default function Register() {
                     <FormLabel className="text-black">Password</FormLabel>
                     <FormControl>
                       <Input
+                        autoComplete="off"
                         type="password"
                         placeholder="Enter your password"
                         {...field}
