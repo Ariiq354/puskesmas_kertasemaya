@@ -94,7 +94,11 @@ export default function Register() {
                   <FormItem>
                     <FormLabel className="text-black">Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="Enter your email" {...field} />
+                      <Input
+                        autoComplete="off"
+                        placeholder="Enter your email"
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
