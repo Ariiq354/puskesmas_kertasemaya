@@ -34,7 +34,9 @@ export default function Client({ data }: Props) {
 
   const filteredData = data.filter((item) =>
     keys.some((key) =>
-      item[key as keyof SearchProps].toLowerCase().includes(querySeach)
+      item[key as keyof SearchProps]
+        .toLowerCase()
+        .includes(querySeach.toLowerCase())
     )
   );
 
