@@ -23,6 +23,10 @@ export const Menus = [
 
 export const NavMenu = [
   {
+    title: "Beranda",
+    href: "/",
+  },
+  {
     title: "Profil",
     href: "/profil",
   },
