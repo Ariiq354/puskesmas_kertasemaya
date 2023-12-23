@@ -10,6 +10,13 @@ import { Input } from "@/components/ui/input";
 import { usePagination } from "@/hooks/use-pagination";
 import { useState } from "react";
 import Pagination from "@/components/ui/pagination";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 interface Props {
   data: tb_berita[];
@@ -26,19 +33,26 @@ const keys = ["nama", "penulis", "deskripsi", "konten"];
 
 export default function Client({ data }: Props) {
   const [querySeach, setQuerySearch] = useState("");
+  const [jenis, setJenis] = useState("berita");
 
-  const handleChange = useDebouncedCallback((data: string) => {
-    setQuerySearch(data);
+  const handleChange = useDebouncedCallback((query: string) => {
+    setQuerySearch(query);
     setCurrentPage(1);
   }, 300);
 
-  const filteredData = data.filter((item) =>
-    keys.some((key) =>
-      item[key as keyof SearchProps]
-        .toLowerCase()
-        .includes(querySeach.toLowerCase())
+  const handleJenis = (jenisQuery: string) => {
+    setJenis(jenisQuery);
+  };
+
+  const filteredData = data
+    .filter((item) =>
+      keys.some((key) =>
+        item[key as keyof SearchProps]
+          .toLowerCase()
+          .includes(querySeach.toLowerCase())
+      )
     )
-  );
+    .filter((item) => item.jenis === jenis);
 
   const {
     currentData,
@@ -51,7 +65,16 @@ export default function Client({ data }: Props) {
 
   return (
     <>
-      <div className="container p-4">
+      <div className="container p-4 flex gap-4">
+        <Select onValueChange={handleJenis} defaultValue={"berita"}>
+          <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder="Role" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="berita">Berita</SelectItem>
+            <SelectItem value="artikel">Artikel</SelectItem>
+          </SelectContent>
+        </Select>
         <Input
           placeholder="Search berita..."
           onChange={(e) => handleChange(e.target.value)}
