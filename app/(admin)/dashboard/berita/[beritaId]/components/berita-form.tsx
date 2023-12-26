@@ -26,11 +26,19 @@ import { Separator } from "@/components/ui/separator";
 import { AlertModal } from "@/components/modal/alert-modal";
 import ImageUpload from "@/components/ui/image-upload";
 import { tb_berita } from "@prisma/client";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const formSchema = z.object({
   nama: z.string().min(1),
   path_image: z.string().min(1),
   penulis: z.string().min(1),
+  jenis: z.string(),
   deskripsi: z.string().min(1),
   konten: z.string().min(1),
 });
@@ -59,6 +67,7 @@ export const BeritaForm: React.FC<BeritaFormProps> = ({ initialData }) => {
       path_image: "",
       penulis: "",
       deskripsi: "",
+      jenis: "berita",
       konten: "",
     },
   });
@@ -177,6 +186,30 @@ export const BeritaForm: React.FC<BeritaFormProps> = ({ initialData }) => {
                 <FormControl>
                   <Input placeholder="Enter penulis" {...field} />
                 </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="jenis"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-black">Type</FormLabel>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger className="w-[180px]">
+                      <SelectValue placeholder="Jenis" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="berita">Berita</SelectItem>
+                    <SelectItem value="artikel">Artikel</SelectItem>
+                  </SelectContent>
+                </Select>
                 <FormMessage />
               </FormItem>
             )}

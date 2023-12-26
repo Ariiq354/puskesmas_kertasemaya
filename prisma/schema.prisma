@@ -35,6 +35,7 @@ model tb_berita {
   penulis    String
   deskripsi  String
   konten     String
+  jenis      String   @default("berita")
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 }

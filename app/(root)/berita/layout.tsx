@@ -7,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <div>
-      <Banner title="Berita Puskesmas" />
+      <Banner title="Berita & Artikel" />
       {children}
     </div>
   );
