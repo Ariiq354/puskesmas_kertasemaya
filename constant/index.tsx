@@ -1,4 +1,9 @@
-import { BiHome, BiImageAdd, BiVideoPlus } from "react-icons/bi";
+import {
+  BiHome,
+  BiImageAdd,
+  BiVideoPlus,
+  BiMessageDetail,
+} from "react-icons/bi";
 import { HiOutlineNewspaper } from "react-icons/hi";
 
 export const Menus = [
@@ -18,6 +23,11 @@ export const Menus = [
     title: "News ",
     src: <HiOutlineNewspaper size={25} />,
     href: "/dashboard/berita",
+  },
+  {
+    title: "Testimoni ",
+    src: <BiMessageDetail size={25} />,
+    href: "/dashboard/testimoni",
   },
 ];
 
