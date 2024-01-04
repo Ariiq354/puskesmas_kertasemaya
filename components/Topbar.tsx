@@ -27,21 +27,11 @@ export default function Topbar() {
 
   return (
     <div className="w-full bg-slate-300 flex justify-end h-16">
-      <div className="flex items-center hover:bg-slate-400 duration-300 px-4">
-        <DropdownMenu>
-          <DropdownMenuTrigger>
-            <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" />
-              <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent>
-            <DropdownMenuItem>
-              <LogOut className="mr-2 h-4 w-4" />
-              <span onClick={() => signOut()}>Log out</span>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+      <div
+        className="flex items-center hover:bg-slate-400 duration-300 px-4 cursor-pointer"
+        onClick={() => signOut()}
+      >
+        Log out
       </div>
       <div
         onClick={() => toggleFullScreen()}
