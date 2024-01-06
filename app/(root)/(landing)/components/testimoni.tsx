@@ -30,29 +30,31 @@ export default function Testimoni() {
   return (
     <div className="w-full h-full flex items-center justify-center py-20">
       <Carousel className="w-full max-w-6xl">
-      <CarouselContent>
-        {!data ? (
-          <div>Loading...</div>
-        ) : (
-          data.map((item) => (
+        <CarouselContent>
+          {!data ? (
+            <div>Loading...</div>
+          ) : (
+            data.map((item) => (
               <CarouselItem className="basis-1/3" key={item.id_testimoni}>
-                <Card className="border-0">
-                  <CardContent className="flex items-center justify-center flex-col gap-4 p-4">
+                <Card className="border-0 h-full">
+                  <CardContent className="flex items-center justify-between flex-col p-4 h-full gap-4">
                     <div className="text-justify opacity-60">
                       “{item.message}”
                     </div>
-                    <div>
-                      <Avatar className="w-20 h-20 border-4 border-red-700">
-                        <AvatarImage src={item.path_image} />
-                      </Avatar>
+                    <div className="flex justify-center items-center flex-col gap-4">
+                      <div>
+                        <Avatar className="w-20 h-20 border-4 border-red-700">
+                          <AvatarImage src={item.path_image} />
+                        </Avatar>
+                      </div>
+                      <div className="text-xl">{item.nama}</div>
                     </div>
-                    <div className="text-xl">{item.nama}</div>
                   </CardContent>
                 </Card>
               </CarouselItem>
-          ))
+            ))
           )}
-          </CarouselContent>
+        </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
