@@ -10,7 +10,6 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { tb_testimoni } from "@prisma/client";
-import { METHODS } from "http";
 import { useEffect, useState } from "react";
 
 export default function Testimoni() {
