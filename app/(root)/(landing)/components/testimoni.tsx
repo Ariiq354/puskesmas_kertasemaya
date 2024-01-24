@@ -43,7 +43,10 @@ export default function Testimoni() {
                     <div className="flex justify-center items-center flex-col gap-4">
                       <div>
                         <Avatar className="w-20 h-20 border-4 border-red-700">
-                          <AvatarImage src={item.path_image} />
+                          <AvatarImage
+                            src={item.path_image}
+                            alt="person image"
+                          />
                         </Avatar>
                       </div>
                       <div className="text-xl">{item.nama}</div>
