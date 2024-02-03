@@ -226,7 +226,7 @@ export const BeritaForm: React.FC<BeritaFormProps> = ({ initialData }) => {
                     onEditorChange={(content) => {
                       field.onChange(content);
                     }}
-                    apiKey="b8avm8cdyus629i1zfez6tb5jr8zyfgp3bii4ntt6fqyz7oe"
+                    apiKey="my1z8ahpmzkf3awiu3fo8o0f5ii9i4p1nrwsnidxa5c102xk"
                     init={{
                       menubar: false,
                       plugins: [
