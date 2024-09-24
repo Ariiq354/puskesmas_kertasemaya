@@ -47,6 +47,13 @@ export default function Ikm() {
           height={300}
           alt=""
         />
+        <Image
+          className="flex flex-initial rounded-lg object-cover shadow-2xl h-auto"
+          src="/ikm_7.jpeg"
+          width={300}
+          height={300}
+          alt=""
+        />
       </div>
     </div>
   );
