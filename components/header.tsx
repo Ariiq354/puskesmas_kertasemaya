@@ -28,7 +28,7 @@ export default function Header() {
             aria-label="facebook link"
           >
             <Image
-              src="/facebook.jpg"
+              src="/facebook.webp"
               width={20}
               height={20}
               alt="Facebook Icon"
@@ -41,7 +41,7 @@ export default function Header() {
             aria-label="isntagram link"
           >
             <Image
-              src="/instagram.png"
+              src="/instagram.webp"
               width={20}
               height={20}
               alt="Instagram Icon"
@@ -54,7 +54,7 @@ export default function Header() {
             aria-label="youtube link"
           >
             <Image
-              src="/youtube.png"
+              src="/youtube.webp"
               width={25}
               height={20}
               alt="Youtube Icon"

@@ -47,14 +47,14 @@ export default function Footer() {
                 target="_blank"
                 aria-label="facebook link"
               >
-                <Image src="/facebook.jpg" width={50} height={50} alt="" />
+                <Image src="/facebook.webp" width={50} height={50} alt="" />
               </Link>
               <Link
                 href="https://www.instagram.com/puskesmas_kertasemaya/"
                 target="_blank"
                 aria-label="instagram link"
               >
-                <Image src="/instagram.png" width={50} height={50} alt="" />
+                <Image src="/instagram.webp" width={50} height={50} alt="" />
               </Link>
               <Link
                 href="https://www.youtube.com/@PuskesmasKertasemaya"
@@ -62,7 +62,7 @@ export default function Footer() {
                 aria-label="youtube link"
               >
                 <Image
-                  src="/youtube.png"
+                  src="/youtube.webp"
                   width={50}
                   height={50}
                   alt=""

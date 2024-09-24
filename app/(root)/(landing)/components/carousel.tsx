@@ -10,8 +10,7 @@ export default function Carousel() {
   return (
     <>
       <div className="w-full section_top lg:h-[50rem] h-[40rem] md:h-[45rem] bg-cover">
-      <div className="w-full image_slides lg:h-[50rem] h-[40rem] md:h-[45rem] bg-cover">
-      </div>
+        <div className="w-full image_slides lg:h-[50rem] h-[40rem] md:h-[45rem] bg-cover"></div>
         <div className="w-full md:pl-24 h-full bg-gradient-to-r from-red-500 flex flex-col justify-center md:items-start items-center gap-4">
           <h1 className="md:text-5xl text-4xl font-bold text-center flex md:justify-start justify-start text-white w-[50%] md:w-[40%] lg:w-full pb-4">
             Selamat Datang di
@@ -60,7 +59,7 @@ export default function Carousel() {
                   target="_blank"
                   aria-label="whatsapp link"
                 >
-                  <Image src="/whatsapp.png" width={30} height={30} alt="" />
+                  <Image src="/whatsapp.webp" width={30} height={30} alt="" />
                 </Link>
               </div>
             </div>

@@ -13,7 +13,7 @@ export default function Kontak() {
           <div className="bg-white flex flex-col font-bold gap-6 justify-center items-center rounded-md shadow-md">
             <div>Whatsapp</div>
             <Link href="https://wa.me/6282118894770">
-              <Image src="/whatsapp.png" width={50} height={50} alt=""></Image>
+              <Image src="/whatsapp.webp" width={50} height={50} alt=""></Image>
             </Link>
             <div>0821-1889-4770</div>
           </div>
@@ -23,7 +23,7 @@ export default function Kontak() {
               className="h-[50px] flex items-center"
               href="mailto:puskes.kertasemaya@gmail.com"
             >
-              <Image src="/email.png" width={50} height={50} alt=""></Image>
+              <Image src="/email.webp" width={50} height={50} alt=""></Image>
             </Link>
             <div>puskes.kertasemaya@gmail.com</div>
           </div>
@@ -33,7 +33,12 @@ export default function Kontak() {
               target="_blank"
               href="https://www.instagram.com/puskesmas_kertasemaya/"
             >
-              <Image src="/instagram.png" width={50} height={50} alt=""></Image>
+              <Image
+                src="/instagram.webp"
+                width={50}
+                height={50}
+                alt=""
+              ></Image>
             </Link>
             <div>puskesmas_kertasemaya</div>
           </div>
@@ -43,7 +48,7 @@ export default function Kontak() {
               target="_blank"
               href="https://www.facebook.com/puskesmas.kertasemaya.7"
             >
-              <Image src="/facebook.jpg" width={50} height={50} alt=""></Image>
+              <Image src="/facebook.webp" width={50} height={50} alt=""></Image>
             </Link>
             <div>Puskesmas Kertasemaya</div>
           </div>

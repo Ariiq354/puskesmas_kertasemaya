@@ -11,7 +11,7 @@ export default function JadwalLayanan() {
           <div className="flex px-10 justify-center items-center lg:pr-5">
             <Image
               className="rounded-lg"
-              src="/puskesmas_header.jpg"
+              src="/puskesmas_header.webp"
               width={600}
               height={600}
               alt=""

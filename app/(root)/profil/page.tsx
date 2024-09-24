@@ -10,7 +10,7 @@ export default async function page() {
 
       <div className="flex justify-center mt-10">
         <Image
-          src="/tentang_kami.jpeg"
+          src="/tentang_kami.webp"
           width={700}
           height={700}
           alt=""
@@ -128,7 +128,7 @@ export default async function page() {
       <div className="text-center p-8">
         <div className="flex justify-center">
           <Image
-            src="/peta.jpeg"
+            src="/peta.webp"
             alt="data demografis, dll"
             width={1200}
             height={1200}
@@ -144,7 +144,7 @@ export default async function page() {
 
         <div className="flex justify-center">
           <Image
-            src="/struktur_organisasi.jpeg"
+            src="/struktur_organisasi.webp"
             alt="struktur organisasi"
             width={800}
             height={1200}

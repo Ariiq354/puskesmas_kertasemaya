@@ -90,7 +90,7 @@
       rgba(255, 213, 213, 1),
       rgba(255, 213, 213, 0.3)
     ),
-    url("/puskesmas_header.jpg");
+    url("/puskesmas_header.webp");
 }
 
 .section_top {
@@ -100,9 +100,9 @@
   position: relative;
 }
 
-.image_slides{
+.image_slides {
   overflow: hidden;
-  background-image: url(/puskesmas_header.jpg);
+  background-image: url(/puskesmas_header.webp);
   background-size: cover;
   background-position: center;
   /* animation: change 18s infinite ease-in-out; */
@@ -117,27 +117,25 @@
   animation-duration: 15s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
-  
 }
 
 @keyframes change {
   0% {
-    background-image: url(/puskesmas_header.jpg);
+    background-image: url(/puskesmas_header.webp);
   }
-  
+
   33% {
-    background-image: url(/tentang_kami.jpeg);
+    background-image: url(/tentang_kami.webp);
   }
 
   67% {
-    background-image: url(/bar1.jpg);
+    background-image: url(/bar1.webp);
   }
 
   100% {
-    background-image: url(/puskesmas_header.jpg);
+    background-image: url(/puskesmas_header.webp);
     scale: 110%;
   }
-
 }
 
 .cutoff {

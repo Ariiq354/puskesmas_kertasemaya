@@ -30,7 +30,7 @@ export default function Esensial() {
         <div className="w-full flex justify-center ">
           <div className=" max-w-6xl flex flex-wrap my-10 justify-center gap-6">
             <CustomCard
-              src="/promosi.jpeg"
+              src="/promosi.webp"
               title="Promosi Kesehatan"
               description="UKM Essensial"
               content=""
@@ -38,7 +38,7 @@ export default function Esensial() {
             />
 
             <CustomCard
-              src="/lingkungan.jpg"
+              src="/lingkungan.webp"
               title="Kesehatan Lingkungan"
               description="UKM Essensial"
               content=""
@@ -46,7 +46,7 @@ export default function Esensial() {
             />
 
             <CustomCard
-              src="/kia.jpeg"
+              src="/kia.webp"
               title="Kesehatan KIA"
               description="UKM Essensial"
               content=""
@@ -54,7 +54,7 @@ export default function Esensial() {
             />
 
             <CustomCard
-              src="/gizi.jpg"
+              src="/gizi.webp"
               title="Gizi"
               description="UKM Essensial"
               content=""
@@ -62,7 +62,7 @@ export default function Esensial() {
             />
 
             <CustomCard
-              src="/menular.jpg"
+              src="/menular.webp"
               title="Pengendalian dan Pencegahan Penyakit Menular (P2PM)"
               description="UKM Essensial"
               content="TB, HIV, Surveilans dan Imunisasi, Ispa, Diare, DBD,
@@ -71,7 +71,7 @@ export default function Esensial() {
             />
 
             <CustomCard
-              src="/tidakMenular.jpg"
+              src="/tidakMenular.webp"
               title="Pengendalian dan Pencegahan Penyakit Tidak Menular (P2PTM)"
               description="UKM Essensial"
               content="PTM (Penyakit Tidak Menular), Jiwa, Indera"

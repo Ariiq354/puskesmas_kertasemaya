@@ -31,49 +31,49 @@ export default function Pelayanan24() {
         <div className="w-full flex justify-center py-10">
           <div className=" max-w-6xl flex flex-wrap justify-center gap-6">
             <CustomCard
-              src="/umum_thumb.jpg"
+              src="/umum_thumb.webp"
               title="Layanan Umum"
               description="Layanan Rawat Jalan"
               content="Senin - Sabtu"
               onTap={onTap}
             />
             <CustomCard
-              src="/gigi_thumb.jpg"
+              src="/gigi_thumb.webp"
               title="Layanan Gigi"
               description="Layanan Rawat Jalan"
               content="Senin - Kamis"
               onTap={onTap}
             />
             <CustomCard
-              src="/balita_thumb.jpg"
+              src="/balita_thumb.webp"
               title="Layanan Bayi-Balita (MTBS)"
               description="Layanan Rawat Jalan"
               content="Senin - Sabtu"
               onTap={onTap}
             />
             <CustomCard
-              src="/lansia_thumb.png"
+              src="/lansia_thumb.webp"
               title="Layanan Usia Lanjut (Lansia)"
               description="Layanan Rawat Jalan"
               content="Senin - Sabtu"
               onTap={onTap}
             />
             <CustomCard
-              src="/tb_thumb.jpg"
+              src="/tb_thumb.webp"
               title="Layanan TB Paru"
               description="Layanan Rawat Jalan"
               content="Senin & Jumat"
               onTap={onTap}
             />
             <CustomCard
-              src="/kb2.jpg"
+              src="/kb2.webp"
               title="Layanan KB"
               description="Layanan Rawat Jalan"
               content="Selasa & Sabtu"
               onTap={onTap}
             />
             <CustomCard
-              src="/kia2.jpg"
+              src="/kia2.webp"
               title="Konseling KIA"
               description="Layanan Konseling Terpadu"
               content="Selasa & Sabtu"
@@ -81,14 +81,14 @@ export default function Pelayanan24() {
             />
 
             <CustomCard
-              src="/kb_thumb.jpeg"
+              src="/kb_thumb.webp"
               title="Konseling KB"
               description="Layanan Konseling Terpadu"
               content="Senin, Rabu, & Jumat"
               onTap={onTap}
             />
             <CustomCard
-              src="/gizi.png"
+              src="/gizi.webp"
               title="Konseling gizi"
               description="Layanan Konseling Terpadu"
               content="Sabtu"
@@ -96,7 +96,7 @@ export default function Pelayanan24() {
             />
 
             <CustomCard
-              src="/haji_thumb.jpg"
+              src="/haji_thumb.webp"
               title="Check-up Calon Haji"
               description="Layanan Rawat Jalan"
               content="Senin - Sabtu"
@@ -104,7 +104,7 @@ export default function Pelayanan24() {
             />
 
             <CustomCard
-              src="/hiv_thumb.jpg"
+              src="/hiv_thumb.webp"
               title="Layanan Konseling"
               description="Layanan Konseling Terpadu"
               content="Senin - Sabtu"
@@ -112,7 +112,7 @@ export default function Pelayanan24() {
             />
 
             <CustomCard
-              src="/lab_thumb.jpg"
+              src="/lab_thumb.webp"
               title="Layanan Laboratorium"
               description="Layanan Rawat Jalan"
               content="Senin - Sabtu"
@@ -120,7 +120,7 @@ export default function Pelayanan24() {
             />
 
             <CustomCard
-              src="/farmasi_thumb.jpg"
+              src="/farmasi_thumb.webp"
               title="Layanan Kefarmasian"
               description="Layanan Rawat Jalan"
               content="Senin - Sabtu"
@@ -128,7 +128,7 @@ export default function Pelayanan24() {
             />
 
             <CustomCard
-              src="/rujukan.png"
+              src="/rujukan.webp"
               title="Layanan Rujukan"
               description="Layanan Rawat Jalan"
               content="Setiap Hari"
@@ -136,7 +136,7 @@ export default function Pelayanan24() {
             />
 
             <CustomCard
-              src="/ambulance_thumb.jpg"
+              src="/ambulance_thumb.webp"
               title="Layanan Ambulance 24 Jam"
               description="Layanan Ambulance"
               content="Setiap Hari"
@@ -144,7 +144,7 @@ export default function Pelayanan24() {
             />
 
             <CustomCard
-              src="/gawat_thumb.jpg"
+              src="/gawat_thumb.webp"
               title="Layanan Gawat Darurat dan Persalinan 24 Jam"
               description="Layanan Ambulance"
               content="Setiap Hari"

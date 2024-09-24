@@ -29,35 +29,35 @@ export default function Pengembangan() {
         <div className="w-full flex justify-center py-10">
           <div className=" max-w-6xl flex flex-wrap justify-center gap-6">
             <CustomCard
-              src="/lansia.jpg"
+              src="/lansia.webp"
               title="Kesehatan Lansia"
               description="Layanan UKM Pengembangan"
               content=""
               onTap={onTap}
             />
             <CustomCard
-              src="/perkesmas.jpg"
+              src="/perkesmas.webp"
               title="Perkesmas"
               description="Layanan UKM Pengembangan"
               content=""
               onTap={onTap}
             />
             <CustomCard
-              src="/sekolah_thumb2.jpg"
+              src="/sekolah_thumb2.webp"
               title="Kesehatan Sekolah"
               description="Layanan UKM Pengembangan"
               content=""
               onTap={onTap}
             />
             <CustomCard
-              src="/gigi.jpg"
+              src="/gigi.webp"
               title="Kesehatan Gigi Sekolah"
               description="Layanan UKM Pengembangan"
               content=""
               onTap={onTap}
             />
             <CustomCard
-              src="/indera.jpeg"
+              src="/indera.webp"
               title="Kesehatan Indera"
               description="Layanan UKM Pengembangan"
               content=""

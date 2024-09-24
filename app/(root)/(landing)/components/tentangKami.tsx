@@ -9,7 +9,7 @@ export default function TentangKami() {
         <div className="flex px-10 justify-center items-center lg:pr-5">
           <Image
             className="rounded-lg"
-            src="/tentang_kami.jpeg"
+            src="/tentang_kami.webp"
             width={800}
             height={800}
             alt=""
