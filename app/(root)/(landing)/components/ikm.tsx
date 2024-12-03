@@ -10,7 +10,7 @@ export default function Ikm() {
         {items.map((item) => (
           <Image
             className="flex flex-initial rounded-lg object-cover shadow-2xl h-auto"
-            src=`/ikm_${item + 1}.webp`
+            src={`/ikm_${item + 1}.webp`}
             width={300}
             height={300}
             alt=""
