@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 export default function Ikm() {
-  const items = Array.from({ length: 9 }, (_, index) => index);
+  const items = Array.from({ length: 10 }, (_, index) => index);
 
   return (
     <div className="w-full h-full flex items-center justify-center">
